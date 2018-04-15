@@ -1,4 +1,4 @@
-= form_with(model: item, local: true) do |form|
+= form_for(@item) do |f|
   - if item.errors.any?
     #error_explanation
       %h2
@@ -8,7 +8,8 @@
         - item.errors.full_messages.each do |message|
           %li= message
   .field
-    = form.label :description
-    = form.text_area :description
+    = f.label :description
+    = f.text_area :description
+    = f.file_field :image
   .actions
-    = form.submit
+    = f.submit
