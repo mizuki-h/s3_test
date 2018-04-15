@@ -17,4 +17,5 @@ s3を用いて簡単なファイルアップロードアプリを
 |:---------:|:----------:|
 | id        |     integer|
 | image     |      string|
+| discription |      text|
 
